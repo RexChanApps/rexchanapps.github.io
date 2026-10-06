@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Closetory 隐私政策与 Privacy Policy.">
+  <title>Closetory · 隐私政策 / Privacy Policy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="brand">Closetory</p>
+      <p class="tagline">Know what you own. Know what to wear.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="card">
+      <div class="language-nav">
+        <a href="#zh">简体中文</a>
+        <a href="#en">English</a>
+        <a href="terms-of-use.html">用户条款 / Terms of Use</a>
+      </div>
+
+      <section id="zh" lang="zh-Hans">
+        <p class="eyebrow">Privacy</p>
+        <h1>隐私政策</h1>
+        <p class="meta">生效日期：2026 年 10 月 7 日　·　最后更新：2026 年 10 月 7 日</p>
+
+        <p>Closetory（以下简称“本 App”）由个人开发者 Shurui Chen（陈树锐，以下简称“我们”）提供。本隐私政策适用于本 App 及我们的隐私政策、用户条款和支持网站。核心衣橱功能无需注册账号，数据保存在设备本地；我们没有用于接收或存储你的衣橱内容的服务器。可选天气查询、你主动发送的支持邮件、分享导出和访问网站涉及的信息处理，分别说明如下。</p>
+
+        <h2>1. 我们处理的信息</h2>
+        <h3>你在设备上创建的内容</h3>
+        <p>你可以在本 App 中保存衣物照片、衣物名称、分类、颜色、季节、保暖度、风格、备注、收藏状态、搭配、日记和穿着统计。这些内容保存在设备本地 App 沙盒和本地数据库中，用于衣橱管理、展示和统计。智能推荐在设备上根据已有搭配、衣物信息、穿着记录及可用天气进行规则匹配和排序，不调用云端 AI，也不会为此上传照片或日记。</p>
+        <h3>相机和照片库</h3>
+        <p>当你主动添加或更换衣物照片时，本 App 使用系统相机或照片选择界面，并按系统要求请求相应权限。选取的照片用于创建、编辑和展示衣物及搭配。裁剪、去背景和颜色建议在设备上处理，不发送给云端图像或 AI 服务。你主动分享、导出或启用系统备份时的处理方式见下文。</p>
+        <h3>位置和天气</h3>
+        <p>当你主动获取或刷新当地天气时，本 App 请求“使用 App 期间”的位置权限并进行一次定位，不在后台持续跟踪。虽然定位的期望精度设为公里级，但这不保证实际位置一定是粗略位置：系统返回的位置可能更精确。当前版本将系统返回的经纬度以最多五位小数发送给天气服务，没有进一步进行公里级模糊化处理。你可以在 iOS 设置中关闭“精确位置”（如可用）、撤回位置权限或不使用天气功能；核心衣橱功能仍可使用。</p>
+        <p>天气查询通过 HTTPS 直接发送给 Open-Meteo（OpenMeteo GmbH），包含经纬度及查询参数，服务商也能接收到网络 IP 地址。其<a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">条款与隐私说明</a>表示，为维护和排障可能记录 IP 地址及含坐标的日志，并在 90 天后删除日志；该保留期限由服务商管理，不是本 App 的删除能力。服务可能在你所在国家或地区以外处理请求。天气查询不包含衣物照片、衣橱或日记内容。</p>
+        <p>本 App 不将定位经纬度持久保存到本地数据库或天气缓存中，只保存最近一次天气快照和获取时间。缓存以 30 分钟作为新鲜度判断，并非 30 分钟后自动删除；快照会保留到被新结果替换、在设置中清空本地数据，或删除 App 本地数据。</p>
+        <h3>备份和导出</h3>
+        <p>本 App 提供由你主动触发的本地备份导出和导入功能。导出文件可能包含衣物照片、衣物信息、搭配和日记记录。当前版本不会为导出文件额外设置密码或加密保护。文件通过 Apple 系统分享面板交给你选择的目标；一旦你将文件发送到其他 App、云盘或他人设备，其处理方式由相应服务和接收方负责。</p>
+        <p>当前版本未启用 App 自身的 CloudKit 自动同步，但这不等于关闭 iOS 系统备份。根据你的设备和 Apple 账户设置，App 本地数据可能被包含在 iCloud 或电脑系统备份中；这些备份由你和 Apple 的系统设置管理，我们无法查看或远程删除。</p>
+        <h3>支持邮件</h3>
+        <p>你主动联系我们时，我们会接收到你的邮箱地址、邮件内容及你选择提供的附件，仅用于回复、排查问题或处理你的请求。邮件由所使用的邮件服务传输和存储。请不要发送不必要的身份证件、精确位置或其他敏感信息；发送截图或备份前请先检查其中的个人内容。</p>
+
+        <h2>2. 我们不会做什么</h2>
+        <ul>
+          <li>不要求注册账号，也不建立我们的用户账户体系。</li>
+          <li>不在当前版本中使用广告 SDK、跨 App 跟踪或第三方分析 SDK。</li>
+          <li>不将衣物照片、衣橱内容或日记自动上传到我们的服务器。</li>
+          <li>不持续收集后台位置，也不出售你的个人信息。</li>
+          <li>当前版本不启用 CloudKit 自动同步；如果未来增加云同步，会在功能启用前更新本政策并说明同步范围。</li>
+        </ul>
+
+        <h2>3. 数据保留、删除和权限管理</h2>
+        <p>你可以在 App 内查看、编辑、删除记录，导出备份，或在设置中清空本地数据。本地数据保留到你删除相应数据或删除 App；iOS 的“卸载 App”（保留文稿与数据）不等于删除 App 数据。备份导入采用合并方式，已有本地记录优先，不会通过导入自动覆盖全部本地数据。我们无法远程访问、修改或恢复你设备上的衣橱内容。</p>
+        <p>你可以在系统设置中调整或撤回相机、照片库和位置权限。相应功能可能受限，但撤回权限不会自动删除已有内容或天气缓存。已导出的文件、接收方副本和系统备份不会因清空 App 或删除 App 自动全部删除，需要在各保存位置单独管理。</p>
+        <p>支持邮件仅保留处理请求所需的时间，适用法律要求保留或解决争议所必需的情况除外。你可以通过下方邮箱申请访问、更正或删除我们收到的信息，或提出适用法律赋予的其他隐私请求；核实请求时只会要求必要的信息。第三方独立持有的日志或备份受其政策和权利请求渠道管理。</p>
+        <p>本 App 使用 iOS 沙盒和系统权限保护本地内容，天气请求使用 HTTPS，但任何设备、网络或备份都无法保证绝对安全。请保护设备和备份文件，并避免在公开位置分享包含个人信息的导出文件。</p>
+
+        <h2>4. 第三方服务</h2>
+        <p>天气服务的数据处理见第 1 节。相机、照片库、定位、系统分享、系统备份及 App Store 服务受 Apple 的系统设置和<a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">隐私政策</a>约束；你选择的导出接收方按其自身政策处理文件。本 App 不会为广告、分析或云端 AI 向第三方自动提供衣物照片或日记。</p>
+        <h3>GitHub Pages 网站</h3>
+        <p>隐私政策、用户条款和支持页面部署于 GitHub Pages。页面本身不添加分析脚本、广告追踪、在线表单或外部字体。访问网站不上传你的衣橱内容；但 GitHub 会为安全目的记录访问者 IP 地址，即使未登录 GitHub。详情见<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener noreferrer">GitHub Pages 数据收集说明</a>和<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub 隐私声明</a>。点击外部链接后，相应网站的政策适用。</p>
+
+        <h2>5. 儿童隐私</h2>
+        <p>本 App 不是专门面向儿童设计的服务。未成年人应在监护人的指导下使用，并避免在照片、备注、导出文件或邮件中提供不必要的个人信息。监护人对未成年人的信息处理有疑问或希望提出删除请求时，可以联系我们。</p>
+
+        <h2>6. 政策更新</h2>
+        <p>如果数据处理方式发生变化，我们会更新本页面日期，并对重要变化通过 App 内提示或更新说明进行告知。未来新增云同步、云端 AI 或其他涉及新数据用途的功能前，会更新说明，并在适用法律要求时取得相应同意。阅读本政策或继续使用 App 本身不代替法律要求的同意。</p>
+
+        <h2>7. 联系我们</h2>
+        <p>如果你对隐私或数据处理有疑问，请联系：<a href="mailto:developer_rex@163.com">developer_rex@163.com</a>。</p>
+      </section>
+
+      <hr>
+
+      <section id="en" lang="en">
+        <p class="eyebrow">Privacy</p>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Effective date: October 7, 2026　·　Last updated: October 7, 2026</p>
+
+        <p>Closetory (the “App”) is provided by individual developer Shurui Chen (陈树锐, “we”, “us”, or “our”). This policy covers the App and our privacy, terms, and support website. Core wardrobe features require no account and store content on your device; we do not operate a server that receives or stores your wardrobe content. Optional weather requests, support emails you send, sharing and exports, and website visits are described separately below.</p>
+
+        <h2>1. Information handled by the App</h2>
+        <h3>Content you create on your device</h3>
+        <p>You may save clothing photos, names, categories, colors, seasons, warmth, styles, notes, favorites, outfits, journal entries, and wear statistics. This content is stored in the App’s local database and sandbox for wardrobe management, display, and statistics. Smart recommendations use on-device rules to match and rank existing outfits using clothing information, wear history, and available weather. They do not call cloud AI or upload photos or journals for this purpose.</p>
+        <h3>Camera and photo library</h3>
+        <p>When you add or replace a clothing photo, the App uses the system camera or photo selection interface and requests permissions as required by the system. Selected photos are used to create, edit, and display clothing and outfits. Cropping, background removal, and color suggestions run on your device, not a cloud image or AI service. User-initiated sharing, exports, and system backups are described below.</p>
+        <h3>Location and weather</h3>
+        <p>When you request or refresh local weather, the App requests While In Use location access and obtains a one-time location; it does not continuously track you in the background. Kilometer-level desired accuracy does not guarantee a coarse result: the system may return a more precise location. The current version sends system-provided coordinates to the weather service with up to five decimal places, without further kilometer-level obfuscation. You can disable Precise Location in iOS settings where available, revoke location access, or skip weather features; core wardrobe features remain usable.</p>
+        <p>Weather requests go directly over HTTPS to Open-Meteo (OpenMeteo GmbH), including coordinates and query parameters; the provider also receives your network IP address. Its <a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">terms and privacy notice</a> describe technical logging that may include IP addresses and coordinates, with logs deleted after 90 days. The provider controls that retention, not the App. Requests may be processed outside your country or region. Weather requests contain no clothing photos, wardrobe content, or journals.</p>
+        <p>The App does not persist location coordinates in its database or weather cache. It saves the latest weather snapshot and fetch time. The 30-minute freshness threshold is not an automatic deletion deadline; the snapshot remains until replaced, cleared using the App’s local-data reset, or removed with the App’s local data.</p>
+        <h3>Backups and exports</h3>
+        <p>The App provides user-initiated local backup export and import. An exported file may contain clothing photos, clothing details, outfits, and journal entries. The current version does not add a password or encryption layer to exported files. The file is passed through Apple’s system share sheet to the destination you choose. Once you send it to another app, cloud drive, or person, that recipient’s policies and practices apply.</p>
+        <p>App-level CloudKit automatic sync is not enabled, but this does not disable iOS system backups. Depending on your device and Apple account settings, local App data may be included in iCloud or computer backups. Those backups are managed through your settings and Apple’s services; we cannot view or remotely delete them.</p>
+        <h3>Support emails</h3>
+        <p>If you contact us, we receive your email address, message, and attachments you choose to provide, solely to reply, troubleshoot, or handle your request. Emails are transmitted and stored by the email services involved. Do not send unnecessary identity documents, precise locations, or other sensitive information. Check screenshots and backups for personal content before sending them.</p>
+
+        <h2>2. What we do not do</h2>
+        <ul>
+          <li>We do not require registration or maintain an account system in the current version.</li>
+          <li>We do not use advertising SDKs, cross-app tracking, or third-party analytics SDKs in the current version.</li>
+          <li>We do not automatically upload clothing photos, wardrobe content, or journal entries to our servers.</li>
+          <li>We do not continuously collect background location or sell personal information.</li>
+          <li>CloudKit automatic sync is not enabled in the current version. If cloud sync is introduced later, we will update this policy and explain the scope before enabling it.</li>
+        </ul>
+
+        <h2>3. Retention, deletion, and permissions</h2>
+        <p>You can view, edit, and delete records, export backups, or clear local data in App settings. Local content remains until you delete it or delete the App; iOS Offload App retains documents and data and is not equivalent to deleting App data. Backup imports merge records with existing local records taking priority, rather than automatically overwriting all local content. We cannot remotely access, change, or restore your on-device wardrobe.</p>
+        <p>You can adjust or revoke camera, photo library, and location permissions in system settings. This may restrict related features but does not automatically delete existing content or weather caches. Exported files, recipients’ copies, and system backups are not all automatically deleted by clearing or deleting the App; manage them separately at each destination.</p>
+        <p>We retain support emails only as long as necessary to handle the request, unless retention is legally required or necessary to resolve a dispute. Contact us below to request access, correction, deletion, or other privacy rights available under applicable law concerning information we receive. We request only necessary information to verify requests. Logs and backups independently held by third parties are governed by their own policies and rights-request channels.</p>
+        <p>The App uses the iOS sandbox and system permissions to protect local content, and HTTPS for weather requests. No device, network, or backup can be guaranteed completely secure. Protect your device and backups, and avoid publicly sharing exports containing personal information.</p>
+
+        <h2>4. Third-party services</h2>
+        <p>Weather-service processing is described in section 1. Camera, photo library, location, system sharing, system backups, and App Store services are governed by Apple’s settings and <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Privacy Policy</a>. Export recipients you choose process files under their own policies. The App does not automatically provide clothing photos or journals to third parties for advertising, analytics, or cloud AI.</p>
+        <h3>GitHub Pages website</h3>
+        <p>Our privacy, terms, and support pages are hosted on GitHub Pages. The pages add no analytics scripts, advertising trackers, online forms, or external fonts. Visiting the site does not upload wardrobe content, but GitHub logs visitors’ IP addresses for security, even without a GitHub login. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener noreferrer">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>. External sites’ policies apply when you follow their links.</p>
+
+        <h2>5. Children’s privacy</h2>
+        <p>The App is not directed specifically to children. Minors should use it with guidance from a parent or guardian and avoid unnecessary personal information in photos, notes, exports, or emails. Guardians with questions or deletion requests concerning a minor’s information can contact us.</p>
+
+        <h2>6. Changes to this policy</h2>
+        <p>If data practices change, we will update this page’s dates and communicate material changes through the App or release notes. Before introducing cloud sync, cloud AI, or other new data uses, we will update these disclosures and obtain consent where applicable law requires it. Reading this policy or continuing to use the App does not itself replace legally required consent.</p>
+
+        <h2>7. Contact</h2>
+        <p>For privacy or data questions, contact <a href="mailto:developer_rex@163.com">developer_rex@163.com</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Closetory Legal</a>
+      <a href="terms-of-use.html">用户条款 / Terms of Use</a>
+    </div>
+    <div>© 2026 Closetory</div>
+  </footer>
+</body>
+</html>
