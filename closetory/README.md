@@ -23,18 +23,19 @@ Before publishing, confirm:
 
 1. The public contact email is correct.
 2. The operator/developer identity is accurate: Shurui Chen (陈树锐).
-3. The Open-Meteo service description still matches the provider used by the released build.
+3. The WeatherKit / Apple Weather service description matches the released build; no alternate weather provider is used.
 4. These October 7, 2026 disclosures match the released build, including the 40-item / 20-outfit creation limits, local rule-based recommendations, merge-style imports, and absence of IAP and App-level CloudKit sync.
 5. All three pages, language anchors, stylesheet, email links, and links between documents work over HTTPS without login on both Wi-Fi and mobile data in the intended markets. Test the actual deployed URLs, not only local files.
-6. The App and App Store Connect point to the deployed privacy URL. Match the App Store privacy questionnaire to actual data handling; do not assume that local-first or no accounts means no information is sent to third parties. Weather requests send system-provided coordinates and an IP address to the provider.
-7. The App's weather display also includes appropriate Open-Meteo attribution and a CC BY 4.0 link. Attribution on this website alone is not a substitute for attribution where weather data is displayed. See [Open-Meteo's data license](https://open-meteo.com/en/pricing).
+6. The App and App Store Connect point to the deployed privacy URL. Match the privacy questionnaire to actual data handling; WeatherKit alone does not establish “Data Not Collected.” Queries send coordinates rounded to two decimal places; network connections involve IP information.
+7. Both weather displays use official Apple Weather marks and the legal URL returned by WeatherService.attribution. Website attribution alone is insufficient. See [Apple's requirements](https://developer.apple.com/weatherkit/).
 8. Review the provider-selection commitments in the Privacy Policy before publishing. The public provider notices describe safeguards, but they are not an independent audit or a provider-specific contractual confirmation of every App Review requirement. Do not publish claims that you cannot substantiate.
-9. Ensure users are informed of the weather recipient and logging before their first weather transmission; a policy URL and a generic system location prompt are not by themselves proof of informed consent to third-party sharing.
+9. Confirm versioned, explicit weather opt-in and withdrawal work before sending coordinates. A policy URL and a generic location prompt alone do not establish informed consent.
+10. Enable WeatherKit under both Capabilities and App Services for com.RexChan.Closetory in the developer portal, refresh signing profiles, and test a signed build on a device. Local entitlement configuration and simulator tests do not establish service authorization.
 
 ## Scope and future updates
 
-These documents describe the current code, not a planned WeatherKit migration. The location accuracy setting is a desired accuracy, not a guarantee of coarse location. Weather snapshots have a 30-minute freshness threshold, not a 30-minute deletion deadline. App-level CloudKit sync is disabled, but Apple system backups may still include local data.
+These documents describe the native WeatherKit implementation. The App rounds coordinates explicitly before transmission; desiredAccuracy alone is not the privacy safeguard. Snapshot usability ends at the earlier of 30 minutes and Apple's expiry; expired cache is removed on next access or launch, not by a promised background deletion timer. App-level CloudKit sync is disabled, but system backups may still include local data. No server-log retention period or processing region is guaranteed by these pages.
 
-If you add WeatherKit, CloudKit, accounts, analytics, advertising, cloud AI, or in-app purchases, review both pages and the App Store disclosures before shipping. Before monetizing with the current weather provider, separately verify [Open-Meteo's commercial API conditions](https://open-meteo.com/en/terms); being free to download alone does not establish eligibility for its free API.
+If you add CloudKit, accounts, analytics, advertising, cloud AI, or in-app purchases, review both pages and App Store disclosures before shipping. Review Apple WeatherKit quotas, attribution, cache limits, and applicable developer agreements before monetization. Do not silently introduce another provider.
 
 Publishing these files does not itself add an in-app privacy notice, obtain legally required consent, complete the privacy questionnaire, or establish compliance with every market's laws. Obtain professional legal advice where needed; this is not a guarantee of App Store approval.
