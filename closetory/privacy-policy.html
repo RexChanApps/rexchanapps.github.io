@@ -36,6 +36,7 @@
         <h3>相机和照片库</h3>
         <p>当你主动添加或更换衣物照片时，本 App 使用系统相机或照片选择界面，并按系统要求请求相应权限。选取的照片用于创建、编辑和展示衣物及搭配。裁剪、去背景和颜色建议在设备上处理，不发送给云端图像或 AI 服务。你主动分享、导出或启用系统备份时的处理方式见下文。</p>
         <h3>位置和天气</h3>
+        <p>天气功能是可选的。首次主动获取天气前，App 会说明 Open-Meteo 接收的信息、可能的境外处理及日志保留方式；只有你点击“同意并获取天气”后才开始请求位置权限和天气。该同意记录只保存在设备上，不随天气请求发送。你可以在“设置 → 隐私与数据”中撤回天气共享同意，清除本地天气快照并停止后续请求；再次使用需重新同意。撤回或清空本地数据不会删除服务商已保留的日志，也不等于撤回 iOS 系统位置权限。</p>
         <p>当你主动获取或刷新当地天气时，本 App 请求“使用 App 期间”的位置权限并进行一次定位，不在后台持续跟踪。虽然定位的期望精度设为公里级，但这不保证实际位置一定是粗略位置：系统返回的位置可能更精确。当前版本将系统返回的经纬度以最多五位小数发送给天气服务，没有进一步进行公里级模糊化处理。你可以在 iOS 设置中关闭“精确位置”（如可用）、撤回位置权限或不使用天气功能；核心衣橱功能仍可使用。</p>
         <p>天气查询通过 HTTPS 直接发送给 Open-Meteo（OpenMeteo GmbH），包含经纬度及查询参数，服务商也能接收到网络 IP 地址。其<a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">条款与隐私说明</a>表示，为维护和排障可能记录 IP 地址及含坐标的日志，并在 90 天后删除日志；该保留期限由服务商管理，不是本 App 的删除能力。服务可能在你所在国家或地区以外处理请求。天气查询不包含衣物照片、衣橱或日记内容。</p>
         <p>本 App 不将定位经纬度持久保存到本地数据库或天气缓存中，只保存最近一次天气快照和获取时间。缓存以 30 分钟作为新鲜度判断，并非 30 分钟后自动删除；快照会保留到被新结果替换、在设置中清空本地数据，或删除 App 本地数据。</p>
@@ -43,7 +44,7 @@
         <p>本 App 提供由你主动触发的本地备份导出和导入功能。导出文件可能包含衣物照片、衣物信息、搭配和日记记录。当前版本不会为导出文件额外设置密码或加密保护。文件通过 Apple 系统分享面板交给你选择的目标；一旦你将文件发送到其他 App、云盘或他人设备，其处理方式由相应服务和接收方负责。</p>
         <p>当前版本未启用 App 自身的 CloudKit 自动同步，但这不等于关闭 iOS 系统备份。根据你的设备和 Apple 账户设置，App 本地数据可能被包含在 iCloud 或电脑系统备份中；这些备份由你和 Apple 的系统设置管理，我们无法查看或远程删除。</p>
         <h3>支持邮件</h3>
-        <p>你主动联系我们时，我们会接收到你的邮箱地址、邮件内容及你选择提供的附件，仅用于回复、排查问题或处理你的请求。邮件由所使用的邮件服务传输和存储。请不要发送不必要的身份证件、精确位置或其他敏感信息；发送截图或备份前请先检查其中的个人内容。</p>
+        <p>你主动联系我们时，我们会接收到你的邮箱地址、邮件内容及你选择提供的附件，仅用于回复、排查问题和处理支持或隐私请求，不用于营销、用户画像或广告。邮件由所使用的邮件服务传输和存储。请不要发送不必要的身份证件、精确位置或其他敏感信息；发送截图或备份前请先检查其中的个人内容。</p>
 
         <h2>2. 我们不会做什么</h2>
         <ul>
@@ -62,8 +63,12 @@
 
         <h2>4. 第三方服务</h2>
         <p>天气服务的数据处理见第 1 节。相机、照片库、定位、系统分享、系统备份及 App Store 服务受 Apple 的系统设置和<a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">隐私政策</a>约束；你选择的导出接收方按其自身政策处理文件。本 App 不会为广告、分析或云端 AI 向第三方自动提供衣物照片或日记。</p>
+        <h3>数据保护措施与责任范围</h3>
+        <p>我们按必要范围使用第三方服务，不向天气服务或网站托管服务提供衣橱内容。我们要求处理本 App 必要数据的服务商，在本政策说明的处理范围内提供同等或不低于本政策的数据保护，包括必要用途限制、合理的安全措施和适用的隐私权利保障。这是我们的服务商选用要求，不表示 App 能控制或自行删除服务商持有的全部数据。</p>
+        <p>当前天气请求采用 HTTPS。Open-Meteo 的免费 API 说明规定，技术日志不与第三方分享，并在 90 天后删除。该说明没有单独列明免费 API 日志的提前删除流程；有关日志及隐私请求可联系 <a href="mailto:info@open-meteo.com">info@open-meteo.com</a>，我们不能保证服务商会在规定保留期前删除日志。我们不会把服务商的声明描述为独立安全审计；其处理方式发生重要变化时，我们会重新评估服务，并在无法满足必要保护要求时停止向其发送相关数据或更换服务。</p>
         <h3>GitHub Pages 网站</h3>
         <p>隐私政策、用户条款和支持页面部署于 GitHub Pages。页面本身不添加分析脚本、广告追踪、在线表单或外部字体。访问网站不上传你的衣橱内容；但 GitHub 会为安全目的记录访问者 IP 地址，即使未登录 GitHub。详情见<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener noreferrer">GitHub Pages 数据收集说明</a>和<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub 隐私声明</a>。点击外部链接后，相应网站的政策适用。</p>
+        <p>GitHub 的隐私声明说明其使用适当的管理、技术和物理安全措施，并按处理目的及法律义务决定保留期限；它未在上述 Pages 说明中为网站访问 IP 日志指定统一的删除天数。相关访问、更正或删除请求可通过其隐私渠道提交。App 的“清空本地数据”不会删除这些网站日志。</p>
 
         <h2>5. 儿童隐私</h2>
         <p>本 App 不是专门面向儿童设计的服务。未成年人应在监护人的指导下使用，并避免在照片、备注、导出文件或邮件中提供不必要的个人信息。监护人对未成年人的信息处理有疑问或希望提出删除请求时，可以联系我们。</p>
@@ -90,6 +95,7 @@
         <h3>Camera and photo library</h3>
         <p>When you add or replace a clothing photo, the App uses the system camera or photo selection interface and requests permissions as required by the system. Selected photos are used to create, edit, and display clothing and outfits. Cropping, background removal, and color suggestions run on your device, not a cloud image or AI service. User-initiated sharing, exports, and system backups are described below.</p>
         <h3>Location and weather</h3>
+        <p>Weather is optional. Before your first user-initiated weather request, the App explains the information received by Open-Meteo, possible processing outside your country or region, and technical-log retention. Location permission and weather requests begin only after you select “Allow and get weather.” The consent record stays on your device and is not sent with weather requests. In Settings → Privacy &amp; Data, you can withdraw weather-sharing consent, clear the local weather snapshot, and stop subsequent requests; using weather again requires renewed consent. Withdrawal or clearing local data does not delete logs already held by the provider or revoke the iOS system location permission.</p>
         <p>When you request or refresh local weather, the App requests While In Use location access and obtains a one-time location; it does not continuously track you in the background. Kilometer-level desired accuracy does not guarantee a coarse result: the system may return a more precise location. The current version sends system-provided coordinates to the weather service with up to five decimal places, without further kilometer-level obfuscation. You can disable Precise Location in iOS settings where available, revoke location access, or skip weather features; core wardrobe features remain usable.</p>
         <p>Weather requests go directly over HTTPS to Open-Meteo (OpenMeteo GmbH), including coordinates and query parameters; the provider also receives your network IP address. Its <a href="https://open-meteo.com/en/terms" rel="noopener noreferrer">terms and privacy notice</a> describe technical logging that may include IP addresses and coordinates, with logs deleted after 90 days. The provider controls that retention, not the App. Requests may be processed outside your country or region. Weather requests contain no clothing photos, wardrobe content, or journals.</p>
         <p>The App does not persist location coordinates in its database or weather cache. It saves the latest weather snapshot and fetch time. The 30-minute freshness threshold is not an automatic deletion deadline; the snapshot remains until replaced, cleared using the App’s local-data reset, or removed with the App’s local data.</p>
@@ -97,7 +103,7 @@
         <p>The App provides user-initiated local backup export and import. An exported file may contain clothing photos, clothing details, outfits, and journal entries. The current version does not add a password or encryption layer to exported files. The file is passed through Apple’s system share sheet to the destination you choose. Once you send it to another app, cloud drive, or person, that recipient’s policies and practices apply.</p>
         <p>App-level CloudKit automatic sync is not enabled, but this does not disable iOS system backups. Depending on your device and Apple account settings, local App data may be included in iCloud or computer backups. Those backups are managed through your settings and Apple’s services; we cannot view or remotely delete them.</p>
         <h3>Support emails</h3>
-        <p>If you contact us, we receive your email address, message, and attachments you choose to provide, solely to reply, troubleshoot, or handle your request. Emails are transmitted and stored by the email services involved. Do not send unnecessary identity documents, precise locations, or other sensitive information. Check screenshots and backups for personal content before sending them.</p>
+        <p>If you contact us, we receive your email address, message, and attachments you choose to provide, solely to reply, troubleshoot, and handle support or privacy requests, not for marketing, profiling, or advertising. Emails are transmitted and stored by the email services involved. Do not send unnecessary identity documents, precise locations, or other sensitive information. Check screenshots and backups for personal content before sending them.</p>
 
         <h2>2. What we do not do</h2>
         <ul>
@@ -116,8 +122,12 @@
 
         <h2>4. Third-party services</h2>
         <p>Weather-service processing is described in section 1. Camera, photo library, location, system sharing, system backups, and App Store services are governed by Apple’s settings and <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Privacy Policy</a>. Export recipients you choose process files under their own policies. The App does not automatically provide clothing photos or journals to third parties for advertising, analytics, or cloud AI.</p>
+        <h3>Protection measures and responsibilities</h3>
+        <p>We use third-party services only to the extent necessary and do not provide wardrobe content to the weather or website-hosting providers. We require providers handling necessary App data to offer protection equal to or greater than this policy within the processing scope described here, including necessary-purpose limits, reasonable security measures, and applicable privacy rights. This is our provider-selection requirement, not a statement that the App controls or can itself delete all data held by providers.</p>
+        <p>Weather requests use HTTPS. Open-Meteo’s free-API notice states that technical logs are not shared with third parties and are deleted after 90 days. It does not separately specify an early-deletion procedure for free-API logs. Log questions and privacy requests can be sent to <a href="mailto:info@open-meteo.com">info@open-meteo.com</a>; we cannot guarantee deletion before the stated retention period. We do not present provider statements as an independent security audit. We will reassess material changes and stop sending affected data or replace the service if necessary protection requirements cannot be met.</p>
         <h3>GitHub Pages website</h3>
         <p>Our privacy, terms, and support pages are hosted on GitHub Pages. The pages add no analytics scripts, advertising trackers, online forms, or external fonts. Visiting the site does not upload wardrobe content, but GitHub logs visitors’ IP addresses for security, even without a GitHub login. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener noreferrer">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>. External sites’ policies apply when you follow their links.</p>
+        <p>GitHub’s privacy statement describes appropriate administrative, technical, and physical safeguards, with retention depending on processing purposes and legal obligations. The Pages notice cited above does not specify one deletion period for all visitor-IP logs. Related access, correction, or deletion requests can be submitted through GitHub’s privacy channels. Clearing local App data does not delete these website logs.</p>
 
         <h2>5. Children’s privacy</h2>
         <p>The App is not directed specifically to children. Minors should use it with guidance from a parent or guardian and avoid unnecessary personal information in photos, notes, exports, or emails. Guardians with questions or deletion requests concerning a minor’s information can contact us.</p>

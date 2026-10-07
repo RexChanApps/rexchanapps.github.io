@@ -28,6 +28,8 @@ Before publishing, confirm:
 5. All three pages, language anchors, stylesheet, email links, and links between documents work over HTTPS without login on both Wi-Fi and mobile data in the intended markets. Test the actual deployed URLs, not only local files.
 6. The App and App Store Connect point to the deployed privacy URL. Match the App Store privacy questionnaire to actual data handling; do not assume that local-first or no accounts means no information is sent to third parties. Weather requests send system-provided coordinates and an IP address to the provider.
 7. The App's weather display also includes appropriate Open-Meteo attribution and a CC BY 4.0 link. Attribution on this website alone is not a substitute for attribution where weather data is displayed. See [Open-Meteo's data license](https://open-meteo.com/en/pricing).
+8. Review the provider-selection commitments in the Privacy Policy before publishing. The public provider notices describe safeguards, but they are not an independent audit or a provider-specific contractual confirmation of every App Review requirement. Do not publish claims that you cannot substantiate.
+9. Ensure users are informed of the weather recipient and logging before their first weather transmission; a policy URL and a generic system location prompt are not by themselves proof of informed consent to third-party sharing.
 
 ## Scope and future updates
 
